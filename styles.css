@@ -15,6 +15,9 @@ html {
 	margin: 0;
 	padding: 0;
 }
+button {
+	cursor: pointer;
+}
 body {
 	height: 100%;
 }
@@ -88,16 +91,6 @@ input:checked + .slider:before {
 	font-size: 15px;
 }
 
-.learn-more {
-	background: linear-gradient(to top, #7176e0, #9fa4ee);
-	width: 100%;
-	height: 40px;
-	border-radius: 4px;
-	border: none;
-	font-weight: 700;
-	color: white;
-	margin-top: 32px;
-}
 .pro-container > button {
 	background: white;
 	color: #696fdd;
@@ -179,4 +172,37 @@ input:checked + .slider:before {
 }
 .pro-container ul:last-child {
 	border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.learn-more {
+	background: linear-gradient(to top, #7176e0, #9fa4ee);
+	width: 100%;
+	height: 40px;
+	border-radius: 4px;
+	border: none;
+	font-weight: 700;
+	color: white;
+	margin-top: 32px;
+	transition: color ease-in-out 0.3s;
+}
+.learn-more:hover {
+	background: white;
+	color: #696fdd;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.pro-container .learn-more:hover {
+	color: white;
+	background: #7176e0;
+	border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+	.pricings-container {
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+	.container {
+		margin-bottom: 64px;
+		width: 90%;
+	}
 }
